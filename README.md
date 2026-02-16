@@ -1,73 +1,169 @@
-# React + TypeScript + Vite
+📸 React-Based Image Gallery with API Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive image gallery built using React + TypeScript that integrates with the Pixabay REST API.
 
-Currently, two official plugins are available:
+This project demonstrates API integration, infinite scrolling, modal preview functionality, dark mode implementation, and modern UI/UX practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+** Live Features**
 
-## React Compiler
+🔎 Image Search Functionality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+♾️ Infinite Scroll Pagination
 
-## Expanding the ESLint configuration
+🌙 Dark Mode Toggle
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🖼️ Modal Image Preview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+⏳ Loading Skeleton Animation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🔐 Environment Variable Support
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📱 Responsive Grid Layout
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⚡ Built with Vite for fast performance
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React
+
+TypeScript
+
+Vite
+
+Pixabay REST API
+
+CSS3 (Modern UI Design)
+
+📂 Project Structure
+react-image-gallery-api/
+│
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│
+├── .env
+├── package.json
+├── vite.config.ts
+└── README.md
+
+⚙️ How It Works
+1️⃣ API Integration
+
+The application fetches images dynamically using the Pixabay API:
+
+https://pixabay.com/api/?key=API_KEY&q=search_query
+
+
+Async/Await for API calls
+
+State management using React Hooks
+
+Conditional rendering for loading state
+
+2️⃣ Infinite Scroll
+
+Scroll detection is implemented using:
+
+window.addEventListener("scroll", handleScroll);
+
+
+When the user reaches the bottom of the page:
+
+Page number increments
+
+New images are appended to state
+
+3️⃣ Dark Mode
+
+Dark mode is handled using conditional class rendering:
+
+<div className={darkMode ? "app dark" : "app"}>
+
+4️⃣ Modal Image Preview
+
+Clicking an image opens a full-screen preview modal.
+
+🔧 Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/skumari8824201-coder/react-image-gallery-api.git
+
+
+Navigate to the project:
+
+cd react-image-gallery-api
+
+
+Install dependencies:
+
+npm install
+
+
+Run development server:
+
+npm run dev
+
+🔑 Environment Variable
+
+Create a .env file in the root:
+
+VITE_PIXABAY_KEY=your_api_key_here
+
+
+This project currently includes a template API key for demonstration purposes.
+
+📸 Screenshots
+
+You can add screenshots here after deployment.
+
+Example:
+
+![App Screenshot](screenshot.png)
+
+🎯 Learning Objectives
+
+This project demonstrates:
+
+REST API consumption in React
+
+TypeScript interface usage
+
+Infinite scrolling implementation
+
+UI state management
+
+Responsive design principles
+
+Clean component architecture
+
+Secure environment configuration
+
+💼 Resume Description
+
+Developed a responsive React + TypeScript image gallery integrating REST API with infinite scroll, modal preview, dark mode, and environment-based configuration.
+
+📌 Future Improvements
+
+Add debounce search optimization
+
+Add category filters
+
+Add pagination controls
+
+Add animations with Framer Motion
+
+Deploy with CI/CD pipeline
+
+👩‍💻 Author
+
+Sonali Kumari
+B.Tech CSE (3rd Year)
+Frontend Developer | React & JavaScript
+
+GitHub:
+https://github.com/skumari8824201-coder
+
+⭐ If You Like This Project
+
+Give it a star on GitHub!
