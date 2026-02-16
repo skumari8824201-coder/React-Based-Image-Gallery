@@ -1,169 +1,137 @@
-📸 React-Based Image Gallery with API Integration
+React-Based Image Gallery with API Integration
+Overview
 
-A modern, responsive image gallery built using React + TypeScript that integrates with the Pixabay REST API.
+React-Based Image Gallery with API Integration is a modern, responsive web application built using React and TypeScript. The application fetches real-time images from the Pixabay REST API and displays them in a dynamic, user-friendly gallery interface.
 
-This project demonstrates API integration, infinite scrolling, modal preview functionality, dark mode implementation, and modern UI/UX practices.
+The project demonstrates practical frontend engineering skills including API integration, state management, infinite scrolling, UI/UX enhancements, and secure environment configuration.
 
-** Live Features**
+Features
 
-🔎 Image Search Functionality
+Real-time image fetching using Pixabay REST API
 
-♾️ Infinite Scroll Pagination
+Infinite scroll pagination
 
-🌙 Dark Mode Toggle
+Search functionality with dynamic query updates
 
-🖼️ Modal Image Preview
+Modal image preview on click
 
-⏳ Loading Skeleton Animation
+Dark mode toggle
 
-🔐 Environment Variable Support
+Loading skeleton for improved user experience
 
-📱 Responsive Grid Layout
+Responsive grid layout
 
-⚡ Built with Vite for fast performance
+Environment variable-based API configuration
 
-🛠️ Tech Stack
+Built using React with TypeScript for type safety
 
-React
+Tech Stack
+
+React (Vite)
 
 TypeScript
 
-Vite
+REST API Integration (Pixabay)
 
-Pixabay REST API
+CSS (Custom Styling)
 
-CSS3 (Modern UI Design)
+Environment Variables (.env configuration)
 
-📂 Project Structure
+Project Structure
 react-image-gallery-api/
-│
-├── src/
-│   ├── App.tsx
-│   ├── main.tsx
-│
-├── .env
-├── package.json
-├── vite.config.ts
-└── README.md
+src/
+─ App.tsx
+─ main.tsx
+─ .env.example
+─ package.json
+─ tsconfig.json
+─ README.md
 
-⚙️ How It Works
-1️⃣ API Integration
-
-The application fetches images dynamically using the Pixabay API:
-
-https://pixabay.com/api/?key=API_KEY&q=search_query
-
-
-Async/Await for API calls
-
-State management using React Hooks
-
-Conditional rendering for loading state
-
-2️⃣ Infinite Scroll
-
-Scroll detection is implemented using:
-
-window.addEventListener("scroll", handleScroll);
-
-
-When the user reaches the bottom of the page:
-
-Page number increments
-
-New images are appended to state
-
-3️⃣ Dark Mode
-
-Dark mode is handled using conditional class rendering:
-
-<div className={darkMode ? "app dark" : "app"}>
-
-4️⃣ Modal Image Preview
-
-Clicking an image opens a full-screen preview modal.
-
-🔧 Installation & Setup
-
-Clone the repository:
-
+Installation and Setup
+1. Clone the Repository
 git clone https://github.com/skumari8824201-coder/react-image-gallery-api.git
-
-
-Navigate to the project:
-
 cd react-image-gallery-api
 
-
-Install dependencies:
-
+2. Install Dependencies
 npm install
 
+3. Environment Configuration
 
-Run development server:
-
-npm run dev
-
-🔑 Environment Variable
-
-Create a .env file in the root:
+Create a .env file in the root directory and add:
 
 VITE_PIXABAY_KEY=your_api_key_here
+This project currently includes a template API key for demonstration purposes. In production scenarios, sensitive credentials should never be exposed publicly.
 
+4. Run the Development Server
+npm run dev
+The application will run locally on:
+http://localhost:5173
 
-This project currently includes a template API key for demonstration purposes.
+Key Implementation Highlights
+API Integration
+Images are fetched using asynchronous fetch calls with dynamic query parameters including search term, page number, and pagination size.
+Infinite Scrolling
 
-📸 Screenshots
+Scroll position detection is implemented using the window scroll event listener to automatically load additional images when reaching the bottom of the page.
 
-You can add screenshots here after deployment.
+State Management
 
-Example:
+React Hooks used:
 
-![App Screenshot](screenshot.png)
+useState
 
-🎯 Learning Objectives
+useEffect
+
+The project manages multiple states including images, pagination, loading status, selected image, and theme mode.
+
+Modal Preview
+
+Clicking an image opens a full-screen modal overlay displaying the high-resolution version.
+
+Dark Mode
+
+A theme toggle dynamically switches between light and dark UI using conditional class rendering.
+
+Loading Skeleton
+
+A shimmer animation is displayed during API calls to improve perceived performance.
+
+Learning Outcomes
 
 This project demonstrates:
 
-REST API consumption in React
+Strong understanding of React functional components
 
-TypeScript interface usage
+TypeScript interface usage for API response typing
 
-Infinite scrolling implementation
+Secure handling of environment variables
 
-UI state management
+Component-level state management
 
-Responsive design principles
+UI/UX enhancement practices
 
-Clean component architecture
+Asynchronous programming with async/await
 
-Secure environment configuration
+Clean and modular frontend architecture
 
-💼 Resume Description
+Future Improvements
 
-Developed a responsive React + TypeScript image gallery integrating REST API with infinite scroll, modal preview, dark mode, and environment-based configuration.
+Implement debounced search input
 
-📌 Future Improvements
+Add error boundary handling
 
-Add debounce search optimization
+Add image category filters
 
-Add category filters
+Implement local storage persistence for theme
 
-Add pagination controls
+Add testing using Jest or React Testing Library
 
-Add animations with Framer Motion
+Deploy with CI/CD integration
 
-Deploy with CI/CD pipeline
-
-👩‍💻 Author
+Author
 
 Sonali Kumari
-B.Tech CSE (3rd Year)
-Frontend Developer | React & JavaScript
+B.Tech Computer Science and Engineering
+Frontend Developer | React & TypeScript Enthusiast
 
-GitHub:
-https://github.com/skumari8824201-coder
-
-⭐ If You Like This Project
-
-Give it a star on GitHub!
+GitHub: https://github.com/skumari8824201-coder
